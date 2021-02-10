@@ -1,0 +1,24 @@
+@import '../node_modules/bulma/sass/utilities/initial-variables';
+
+$primary: #111D5E;
+$link: #B21F66;
+$input-focus-border-color: #ffffff;
+
+@import '../node_modules/bulma/bulma.sass';
+
+// prevents active navbar-menu on mobile from pushing content down
+.navbar-menu.is-active {
+  position: absolute;
+  width: 100%;
+}
+
+// navbar dropdown should close after click
+@media screen and (min-width: 1025px) {
+  .navbar-item.is-hoverable:hover .navbar-dropdown {
+      display: block !important;
+  }
+  .navbar-item.is-hoverable:focus-within .navbar-dropdown {
+      display: none;
+  }
+}
+
