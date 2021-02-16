@@ -3,23 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "author": "Furkat Kholmatov",
+  "email": "fkholmatov@gmail.com",
+  "license": "ISC",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fkholmat/pinpoint.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Furkat Kholmatov",
-  "email": "fkholmatov@gmail.com",
-  "license": "ISC",
   "dependencies": {
+    "@react-google-maps/api": "^2.1.1",
     "bulma": "^0.9.2",
-    "dotenv": "^8.2.0",
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-google-maps": "^7.3.0",
+    "react-icons": "^4.2.0",
     "react-places-autocomplete": "^7.3.0",
     "sass": "^1.32.7"
   }

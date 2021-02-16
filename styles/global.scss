@@ -3,6 +3,7 @@
 $primary: #111D5E;
 $link: #B21F66;
 $input-focus-border-color: #ffffff;
+$dropdown-item-color: $primary;
 
 @import '../node_modules/bulma/bulma.sass';
 
@@ -12,7 +13,18 @@ $input-focus-border-color: #ffffff;
   width: 100%;
 }
 
-// navbar dropdown should close after click
+.location-icon.focused {
+  color: $primary;
+}
+.address-suggestion {
+  padding: 1rem 0px;
+}
+.address-suggestion-focus {
+  background-color: #2F3972;
+  color: $white;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1025px) {
   .navbar-item.is-hoverable:hover .navbar-dropdown {
       display: block !important;
@@ -22,3 +34,8 @@ $input-focus-border-color: #ffffff;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .address-search {
+    width: 70%;
+  }
+}
