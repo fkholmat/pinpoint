@@ -1,9 +1,11 @@
 @import '../node_modules/bulma/sass/utilities/initial-variables';
 
-$primary: #111D5E;
+$primary:#111D5E;
 $link: #B21F66;
-$input-focus-border-color: #ffffff;
+$input-focus-border-color: $white;
 $dropdown-item-color: $primary;
+$modal-card-head-background-color: $primary;
+$modal-card-title-color: $white;
 
 @import '../node_modules/bulma/bulma.sass';
 
@@ -23,6 +25,54 @@ $dropdown-item-color: $primary;
   background-color: #2F3972;
   color: $white;
   cursor: pointer;
+}
+
+// replace cancel icon with custom one
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  background-image: url("../public/images/x-icon-min-primary.svg");
+  background-repeat: no-repeat;
+  height: 1em;
+  width: 1em;
+}
+
+// gap between search box and autocomplete results
+.pac-container {
+  margin-top: 5px;
+}
+// hide Google logo
+.pac-container:after {
+  background-image: none !important;
+  height: 0px;
+}
+.pac-item {
+  padding: 0.75em 0px;
+  cursor: pointer;
+}
+.pac-item > * {
+  color: $primary;
+}
+.pac-item:hover > * {
+  color: $white;
+}
+.pac-item:hover {
+  background-color: lighten($primary, $amount: 5);
+}
+.pac-item:hover .pac-icon {
+  background-image: url("../public/images/marker-icon-min-white.svg") !important;
+}
+.pac-item-query {
+  font-weight: bold;
+}
+.pac-icon { 
+  margin:0px;
+  padding: 0px;
+  vertical-align: middle;
+  background-size: 40px;
+  background-position: 0px 0px;
+  height: 40px;
+  width: 40px;
+  background-image: url("../public/images/marker-icon-min-primary.svg");
 }
 
 @media screen and (min-width: 1025px) {
